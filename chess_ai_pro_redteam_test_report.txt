@@ -1,0 +1,23 @@
+Chess AI Pro — Red Team regression report
+
+Changes
+- Restored the missing spHpForState(state, r, c, piece) helper. It was required by move generation and Worker initialization.
+- Added a fallback move path for a live king in check when all ordinary legal responses are filtered out, including temporary stun/web lock handling.
+- Made minimax/quiescence terminal scoring use king HP. A live king is not assigned a classical mate score. Simultaneous king destruction is scored as a draw.
+- Corrected check-evaluation sign for the engine's black-positive score scale.
+- Added early static combat-state evaluation for special actions and damage-only moves.
+- Reworked ordinary-move HP/effect transfer and cleaned combat metadata attached to empty squares.
+- Replaced false “mate in one” analysis messages and capped displayed loss labels for terminal scores.
+- Updated game-end messages to show king destruction instead of “position needs repair”.
+
+Regression checks run
+- All 5 inline JavaScript blocks passed `node --check`.
+- Initial white pawn move e2-e4 generated and applied; turn switched to black.
+- Moved-piece HP (0.5), shield, and armor transferred to e4; no corresponding keys remained on empty e2.
+- An 80-ply simulation completed without errors; both kings remained and no HP/status keys were left on empty squares.
+- A pistol shot was generated; the target queen's HP decreased from 8 to 7; analysis returned at depth 1 without invoking minimax (nodes = 0).
+- Generated Worker source contains HP and cleanup helpers and passed `node --check`.
+
+Limitations
+- These are syntax and model-level regression tests, not exhaustive visual end-to-end testing in every browser.
+- The GitHub integration rejected write access with HTTP 403 (Resource not accessible by integration), so the repository was not changed remotely. Use the supplied index.html to replace the site entry point manually.
