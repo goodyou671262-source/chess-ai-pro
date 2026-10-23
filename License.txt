@@ -1,0 +1,25 @@
+CHESS AI PRO — RESTRICTED DISTRIBUTION LICENSE
+
+Copyright (c) 2026 Создатель (GitHub: goodyou671262-source). All rights reserved.
+
+Permitted Use
+
+You may download, use, share, and redistribute unmodified copies of Chess AI Pro, provided that:
+
+1. This license and the original copyright notice are included with every copy.
+2. You do not claim that the software was created by someone else.
+3. You do not remove or obscure the copyright or license notice.
+
+Restrictions
+
+You may not publicly distribute, publish, or redistribute modified versions of Chess AI Pro without prior written permission from the copyright holder.
+
+You may make private modifications to your own copy, but this license does not grant permission to distribute modified versions.
+
+No Warranty
+
+The software is provided “AS IS”, without warranty of any kind, express or implied.
+
+For permissions not expressly granted above, contact the copyright holder.
+
+This is a custom, restrictive license and is not an OSI-approved open-source license.
