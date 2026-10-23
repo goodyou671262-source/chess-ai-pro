@@ -1,0 +1,3 @@
+Repository name: chess-ai-pro-halloween
+Description: Offline browser chess with a built-in search engine, tactical puzzles, position analysis, FEN/PGN tools, and a Halloween mode.
+Topics: chess, chess-ai, chess-engine, javascript, html, offline, webgl, chess-puzzles, github-pages
